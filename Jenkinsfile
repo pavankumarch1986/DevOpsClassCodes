@@ -30,6 +30,7 @@ pipeline{
                agent any
               steps{
                   sh 'mvn test'
+		      echo 'hi'
               }
                post {
                success {
