@@ -1,7 +1,3 @@
-git status
-git branch
-git branch -r
-git branch -a
 pipeline{
     tools{
         jdk 'myjava'
