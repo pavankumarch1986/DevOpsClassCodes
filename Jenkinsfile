@@ -18,17 +18,19 @@ pipeline{
               steps{
                   echo 'compiling..'
                   sh 'mvn compile'
-              }
+	      }
           }
           stage('CodeReview'){
               agent any
               steps{
+		  echo 'codeReview'
                   sh 'mvn pmd:pmd'
               }
           }
            stage('UnitTest'){
-               agent any
+		   agent any
               steps{
+	    
                   sh 'mvn test'
 		      echo 'hi'
               }
@@ -55,6 +57,7 @@ pipeline{
                   sh 'mvn package'
               }
           }
+	     
           
       }
 }
